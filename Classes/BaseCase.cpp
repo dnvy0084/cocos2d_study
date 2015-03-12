@@ -72,12 +72,16 @@ void BaseCase::layout()
 
 void BaseCase::layoutTitleLabel()
 {
-	this->title = Label::create("some title", "dotum", 11);
-	this->title->setAnchorPoint(Point(0.0, 1.0));
-	this->title->setPosition(Point(this->titleMargin, this->stage.height - this->titleMargin));
-	this->title->setColor(Color3B(60, 60, 60));
+	auto title = Label::create("title label", "dotum", 12);
 
-	this->addChild(this->title);
+	title = Label::create("some title", "dotum", 11);
+	title->setAnchorPoint(Point(0.0, 1.0));
+	title->setPosition(Point(this->titleMargin, this->stage.height - this->titleMargin));
+	title->setColor(Color3B(60, 60, 60));
+
+	this->addChild(title);
+
+	this->title = title;
 }
 
 void BaseCase::layoutBackButton()

@@ -1,3 +1,4 @@
+#include <string>
 #include "TestMainScene.h"
 #include "BaseCase.h"
 #include "HelloWorldScene.h"
@@ -91,8 +92,11 @@ void TestMain::addEvents()
 void TestMain::onMenuItemClick(Ref* sender)
 {
 	auto item = (MenuItemFont*)sender;
+	int tag = item->getTag();
 
-	this->changeLayer(item->getTag());
+	if (tag >= this->scenes.size()) return;
+
+	this->changeLayer(tag);
 }
 
 void TestMain::changeLayer(int tag)
