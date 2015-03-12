@@ -1,6 +1,6 @@
 # Cocos2D-X
 
-cocos2d-x study 저장소. README를 이용해서 설치 및 프로그래밍에 대한 정리 중. 
+multi platform graphics library
 
 ## Cocos2D 설치
 * [공식 홈페이지](http://www.cocos2d-x.org/) 에서 [Download](http://www.cocos2d-x.org/download)하여 설치
@@ -24,3 +24,7 @@ cocos2d-x study 저장소. README를 이용해서 설치 및 프로그래밍에 
 #### 화면전환
 * Scene과 Scene사이의 전환은 [Director::getInstace()->replaceScene](http://www.cocos2d-x.org/reference/native-cpp/V3.4/d7/df3/classcocos2d_1_1_director.html#ae693d54396ac5f630814cf1f961de830), Director::push(pop)Scene을 이용하며, [Transtion](http://www.cocos2d-x.org/reference/native-cpp/V3.4/da/d00/group__transition.html) 을 이용하면 준비된 화면전환 효과를 사용할 수 있다.
 
+#### 좌표 체계
+* cocos2d는 좌하단이 (0, 0), 우상단이(1, 1)의 좌표체계를 가진다. 
+* Director::getInstace()->getVisibleSize()로 Size 객체를 가지고 오면 stageSize를 알 수 있다.
+* 객체->get(set)AchorPoint(Point(0.5,0.5))로 객체 중점을 중심으로 옮길 수 있다. 기본값은 anchorpoint 는 0.5, 0.5 position은 0, 0
