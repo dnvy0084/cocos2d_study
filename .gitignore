@@ -1,0 +1,8 @@
+#git ignore
+
+#cocos2d libs
+cocos2d/
+
+#proj. 
+proj.*/
+
