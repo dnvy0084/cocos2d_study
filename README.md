@@ -28,3 +28,7 @@ multi platform graphics library
 * cocos2d는 좌하단이 (0, 0), 우상단이(1, 1)의 좌표체계를 가진다. 
 * Director::getInstace()->getVisibleSize()로 Size 객체를 가지고 오면 stageSize를 알 수 있다.
 * 객체->get(set)AchorPoint(Point(0.5,0.5))로 객체 중점을 중심으로 옮길 수 있다. 기본값은 anchorpoint 는 0.5, 0.5 position은 0, 0
+
+#### TouchEvent
+
+#### Animation - spriteSheet
