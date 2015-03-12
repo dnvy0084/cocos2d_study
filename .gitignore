@@ -6,3 +6,5 @@ cocos2d/
 #proj. 
 proj.*/
 
+#bat files
+*.bat
