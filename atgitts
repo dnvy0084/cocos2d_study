@@ -1,0 +1,36 @@
+[33mcommit 7d340898272e59e006977d777d55cc8c9a1250f7[m
+Author: dnvy <dnvy0084@gmail.com>
+Date:   Thu Mar 12 12:21:00 2015 +0900
+
+    %0
+
+[33mcommit 4023d19613643442cabd9794dc54d0f5e9124dfc[m
+Author: dnvy <dnvy0084@gmail.com>
+Date:   Thu Mar 12 12:15:32 2015 +0900
+
+    README
+
+[33mcommit 16bec13e076ddb75f1e1766d051302633daac192[m
+Author: dnvy <dnvy0084@gmail.com>
+Date:   Thu Mar 12 12:02:25 2015 +0900
+
+    README.md
+
+[33mcommit 4d4586dfbe30431d18ca5bab4c2f2c515f7692ee[m
+Merge: 7ad1c43 7963d71
+Author: dnvy <dnvy0084@gmail.com>
+Date:   Thu Mar 12 11:48:56 2015 +0900
+
+    Merge branch 'master' of https://github.com/dnvy0084/cocos2d_study
+
+[33mcommit 7ad1c43c793af6be5b9d0e7ceda9c0f7213117b5[m
+Author: dnvy <dnvy0084@gmail.com>
+Date:   Thu Mar 12 11:48:26 2015 +0900
+
+    initial commit
+
+[33mcommit 7963d71ce08c020e19ea6e6dd06a5498e9a6a632[m
+Author: Kim.jinhoon <dnvy0084@gmail.com>
+Date:   Tue Mar 10 18:55:59 2015 +0900
+
+    Initial commit
