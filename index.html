@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Cocos2d study : cocos2d-x study repository">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Cocos2d study</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/dnvy0084/cocos2d_study">View on GitHub</a>
+
+          <h1 id="project_title">Cocos2d study</h1>
+          <h2 id="project_tagline">cocos2d-x study repository</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/dnvy0084/cocos2d_study/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/dnvy0084/cocos2d_study/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="cocos2d-x" class="anchor" href="#cocos2d-x" aria-hidden="true"><span class="octicon octicon-link"></span></a>Cocos2D-X</h1>
+
+<p>multi platform graphics library</p>
+
+<h2>
+<a id="설치" class="anchor" href="#%EC%84%A4%EC%B9%98" aria-hidden="true"><span class="octicon octicon-link"></span></a>설치</h2>
+
+<ul>
+<li>
+<a href="http://www.cocos2d-x.org/">공식 홈페이지</a> 에서 <a href="http://www.cocos2d-x.org/download">Download</a>하여 설치</li>
+<li>한글이 포함되지 않는 경로에 압축 해제하면 설치 완료</li>
+<li>설치 경로상의 \tools\cocos2d-console\bin 폴더에서 cocos.bat 파일을 이용해서 새 프로젝트를 생성할 수 있음.(환경변수로 등록하면 좋을듯)</li>
+<li>cocos new -p {<strong>PACKAGE_NAME</strong>} -l {<strong>LANGUAGE</strong>( cpp | lua | js )} -d {<strong>DIRECTORY</strong>} {<strong>PROJECT_NAME</strong>(=생성 폴더 이름)} 형식으로 새로운 프로젝트 생성(필요 파일 복사)</li>
+</ul>
+
+<h2>
+<a id="snippets" class="anchor" href="#snippets" aria-hidden="true"><span class="octicon octicon-link"></span></a>Snippets</h2>
+
+<h4>
+<a id="객체-생성" class="anchor" href="#%EA%B0%9D%EC%B2%B4-%EC%83%9D%EC%84%B1" aria-hidden="true"><span class="octicon octicon-link"></span></a>객체 생성</h4>
+
+<ul>
+<li>cocos2d의 모든 객체는 new대신  Class::create 의 static 멤버함수를 이용해 생성한다. </li>
+<li>create함수는 해당 클래스를 생성하여 reference count 형식으로 auto release 할 수 있도록 만든 후 포인터를 return 해준다.</li>
+</ul>
+
+<h4>
+<a id="director" class="anchor" href="#director" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="http://www.cocos2d-x.org/reference/native-cpp/V3.4/d7/df3/classcocos2d_1_1_director.html"><strong>Director</strong></a>
+</h4>
+
+<ul>
+<li>Scene 관리 및 설정, <em>Director director = Director::getInstance();</em> SingleTone 객체로 사용한다. </li>
+<li>cocos2d는 Director라는 Singletone instance가 push, pop, replace된 Scene을 플랫폼에 맞는 native graphics api를 이용해 rendering 해준다. </li>
+</ul>
+
+<h4>
+<a id="scene" class="anchor" href="#scene" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="http://www.cocos2d-x.org/reference/native-cpp/V3.4/d4/d5f/classcocos2d_1_1_scene.html"><strong>Scene</strong></a>
+</h4>
+
+<ul>
+<li>Scene은 화면을 이루는 단위이면 Scene안에서 Layer를 addChild, removeChild하며 세부적인 화면 전환도 만들 수 있다. </li>
+</ul>
+
+<h4>
+<a id="화면전환" class="anchor" href="#%ED%99%94%EB%A9%B4%EC%A0%84%ED%99%98" aria-hidden="true"><span class="octicon octicon-link"></span></a>화면전환</h4>
+
+<ul>
+<li>Scene과 Scene사이의 전환은 <a href="http://www.cocos2d-x.org/reference/native-cpp/V3.4/d7/df3/classcocos2d_1_1_director.html#ae693d54396ac5f630814cf1f961de830">Director::getInstace()-&gt;replaceScene</a>, Director::push(pop)Scene을 이용하며, <a href="http://www.cocos2d-x.org/reference/native-cpp/V3.4/da/d00/group__transition.html">Transtion</a> 을 이용하면 준비된 화면전환 효과를 사용할 수 있다.</li>
+</ul>
+
+<h4>
+<a id="좌표-체계" class="anchor" href="#%EC%A2%8C%ED%91%9C-%EC%B2%B4%EA%B3%84" aria-hidden="true"><span class="octicon octicon-link"></span></a>좌표 체계</h4>
+
+<ul>
+<li>cocos2d는 좌하단이 (0, 0), 우상단이(1, 1)의 좌표체계를 가진다. </li>
+<li>Director::getInstace()-&gt;getVisibleSize()로 Size 객체를 가지고 오면 stageSize를 알 수 있다.</li>
+<li>객체-&gt;get(set)AchorPoint(Point(0.5,0.5))로 객체 중점을 중심으로 옮길 수 있다. 기본값은 anchorpoint 는 0.5, 0.5 position은 0, 0</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Cocos2d study maintained by <a href="https://github.com/dnvy0084">dnvy0084</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-59578721-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+
+  </body>
+</html>
