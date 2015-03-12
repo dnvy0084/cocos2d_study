@@ -12,3 +12,4 @@ cocos2d-x study 저장소. README를 이용해서 설치 및 프로그래밍에 
 * cocos2d는 Director라는 singletone instance가 push, pop, replace된 Scene을 플랫폼에 맞는 native graphic api를 이용해 rendering 해준다. 
 * Scene은 화면을 이루는 단위이면 Scene안에서 Layer를 addChild, removeChild하며 세부적인 화면 전환도 만들 수 있다. 
 * Scene과 Scene사이의 전환은 Director::getInstace()->replaceScene, Director::push(pop)Scene을 이용하며, Transtion Class를 이용하면 준비된 화면전환 효과를 사용할 수 있다.
+* cocos2d의 모든 객체는 -<small>현재까지 살펴본 바로는</small>- new대신  Class::create 의 static 멤버함수를 이용해 생성한다. create함수는 해당 클래스를 생성하여 reference count 형식으로 auto release 할 수 있도록 만든 후 포인터를 return해줌. 
