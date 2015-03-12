@@ -12,10 +12,10 @@ multi platform graphics library
 
 #### 객체 생성
 * cocos2d의 모든 객체는 new대신  Class::create 의 static 멤버함수를 이용해 생성한다. 
-* create함수는 해당 클래스를 생성하여 reference count 형식으로 auto release 할 수 있도록 만든 후 포인터를 return해줌. 
+* create함수는 해당 클래스를 생성하여 reference count 형식으로 auto release 할 수 있도록 만든 후 포인터를 return 해준다.
 
 #### [**Director**](http://www.cocos2d-x.org/reference/native-cpp/V3.4/d7/df3/classcocos2d_1_1_director.html)
-* Scene 관리 및 설정, *Director* director = Director::getInstance();* SingleTone 객체
+* Scene 관리 및 설정, *Director director = Director::getInstance();* SingleTone 객체
 * cocos2d는 Director라는 Singletone instance가 push, pop, replace된 Scene을 플랫폼에 맞는 native graphic api를 이용해 rendering 해준다. 
 
 #### [**Scene**](http://www.cocos2d-x.org/reference/native-cpp/V3.4/d4/d5f/classcocos2d_1_1_scene.html)
